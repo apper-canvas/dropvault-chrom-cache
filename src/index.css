@@ -81,4 +81,12 @@
       padding-bottom: 4rem;
     }
   }
+  
+  /* Custom container for consistent alignment */
+  .custom-container {
+    @apply mx-auto px-4;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
 }
