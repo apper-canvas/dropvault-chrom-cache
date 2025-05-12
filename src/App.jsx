@@ -109,17 +109,27 @@ function App() {
           </div>
         </div>
       </header>
-
-      <main className="container mx-auto px-4 py-8">
+      
+      <main className="py-8">
         <AnimatePresence mode="wait">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<NotFound />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/security" element={<Security />} />
+            <Route 
+              path="/" 
+              element={<Home />} 
+            />
+            <Route 
+              path="*" 
+              element={
+                <div className="container mx-auto px-4">
+                  <NotFound />
+                </div>
+              } 
+            />
+            <Route path="/contact" element={<div className="container mx-auto px-4"><Contact /></div>} />
+            <Route path="/about" element={<div className="container mx-auto px-4"><About /></div>} />
+            <Route path="/terms" element={<div className="container mx-auto px-4"><Terms /></div>} />
+            <Route path="/privacy" element={<div className="container mx-auto px-4"><Privacy /></div>} />
+            <Route path="/security" element={<div className="container mx-auto px-4"><Security /></div>} />
           </Routes>
         </AnimatePresence>
       </main>
