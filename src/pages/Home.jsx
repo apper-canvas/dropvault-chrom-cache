@@ -65,12 +65,41 @@ const Home = () => {
   ];
 
   return (
-    <motion.div
-      className="space-y-12"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
+    <>
+      {/* Hero Section */}
+      <motion.div 
+        className="relative -mx-4 -mt-8 mb-12 overflow-hidden bg-surface-900"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/hero-bg.jpg" 
+            alt="Digital file storage" 
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-secondary-dark/80 mix-blend-multiply"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32 relative z-10">
+          <motion.div 
+            className="max-w-3xl"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+          >
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Secure Cloud Storage for Your Digital World</h1>
+            <p className="text-white/90 text-xl mb-8 max-w-2xl">Store, access, and share your files from anywhere with our secure cloud solution.</p>
+            <button className="btn btn-secondary text-base px-8 py-3 shadow-lg hover:shadow-xl transform transition hover:-translate-y-1">
+              Get Started Free
+            </button>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Main Content */}
+      <motion.div className="space-y-12" initial="hidden" animate="visible" variants={containerVariants}>
       <motion.section variants={itemVariants} className="text-center max-w-4xl mx-auto space-y-4">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Upload, Store & Share Your Files
@@ -139,7 +168,8 @@ const Home = () => {
           </div>
         ))}
       </motion.section>
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
