@@ -81,4 +81,3 @@ const Icons = {
 export default function getIcon(iconName) {
   return Icons[iconName] || Icons.Smile;
 }
-  Mail,
