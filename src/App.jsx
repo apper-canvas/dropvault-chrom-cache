@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Security from './pages/Security';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -118,6 +119,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/security" element={<Security />} />
           </Routes>
         </AnimatePresence>
       </main>
@@ -184,7 +186,8 @@ function App() {
                 {[
                   { name: 'Terms of Service', path: '/terms' },
                   { name: 'Privacy Policy', path: '/privacy' },
-                  { name: 'Cookie Policy', path: '/privacy#cookies' }
+                  { name: 'Cookie Policy', path: '/privacy#cookies' },
+                  { name: 'Security', path: '/security' }
                 ].map((item, index) => (
                   <li key={index}>
                     <Link 
