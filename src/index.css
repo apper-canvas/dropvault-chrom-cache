@@ -65,28 +65,4 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Hero section specific styles */
-  .hero-gradient-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(79, 70, 229, 0.8) 0%,
-      rgba(20, 184, 166, 0.8) 100%
-    );
-  }
-  
-  @media (max-width: 640px) {
-    .hero-content {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-  }
-  
-  /* Custom container for consistent alignment */
-  .custom-container {
-    @apply mx-auto px-4;
-    max-width: 1200px;
-    width: 100%;
-  }
-  
 }

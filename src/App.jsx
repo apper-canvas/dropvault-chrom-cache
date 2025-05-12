@@ -55,7 +55,7 @@ function App() {
     <div className="min-h-screen">
       {/* Top navbar */}
       <header className="bg-white dark:bg-surface-800 shadow-sm sticky top-0 z-10">
-        <div className="custom-container py-3 flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
               <span className="text-white font-bold text-lg">DV</span>
@@ -109,33 +109,23 @@ function App() {
           </div>
         </div>
       </header>
-      
-      <main className="py-8">
+
+      <main className="container mx-auto px-4 py-8">
         <AnimatePresence mode="wait">
           <Routes>
-            <Route 
-              path="/" 
-              element={<Home />} 
-            />
-            <Route 
-              path="*" 
-              element={
-                <div className="custom-container">
-                  <NotFound />
-                </div>
-              } 
-            />
-            <Route path="/contact" element={<div className="custom-container"><Contact /></div>} />
-            <Route path="/about" element={<div className="custom-container"><About /></div>} />
-            <Route path="/terms" element={<div className="custom-container"><Terms /></div>} />
-            <Route path="/privacy" element={<div className="custom-container"><Privacy /></div>} />
-            <Route path="/security" element={<div className="custom-container"><Security /></div>} />
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/security" element={<Security />} />
           </Routes>
         </AnimatePresence>
       </main>
       
       <footer className="bg-white dark:bg-surface-800 border-t border-surface-200 dark:border-surface-700 py-10 mt-12">
-        <div className="custom-container">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company info */}
             <div>
